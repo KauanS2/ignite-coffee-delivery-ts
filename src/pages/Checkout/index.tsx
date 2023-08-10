@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import {
   Adress,
   CheckoutContainer,
@@ -31,7 +32,13 @@ export function Checkout() {
           <button>teste</button>
         </Payment>
       </CompleteOrder>
-      <ConfirmOrder></ConfirmOrder>
+      <ConfirmOrder>
+        <div>items</div>
+        <div>informação</div>
+        <NavLink to="/checkout/sucess" title="Sucesso">
+          Confirmar Pedido
+        </NavLink>
+      </ConfirmOrder>
     </CheckoutContainer>
   )
 }
