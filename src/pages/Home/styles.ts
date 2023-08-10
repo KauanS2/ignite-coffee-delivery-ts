@@ -2,13 +2,15 @@ import { styled } from 'styled-components'
 
 export const HomeContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 3rem 8rem;
+  padding: 3rem 12rem;
   gap: 15px;
 `
 
 export const HomeBox = styled.div`
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   gap: 8px;
 
@@ -31,6 +33,7 @@ export const HomeBox = styled.div`
 export const QualityContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-top: 1rem;
 `
 const STATUS_COLOR = {
   yellowDark: 'yellow-dark',
@@ -42,21 +45,44 @@ const STATUS_COLOR = {
 interface StatusProps {
   statusColor: keyof typeof STATUS_COLOR
 }
-export const StatusQuality = styled.span<StatusProps>`
-  font-size: 16px;
+export const StatusQuality = styled.span`
+  font-size: 1rem;
   display: flex;
-  padding: 0.5rem;
   align-items: center;
   font-family: 'Roboto', Roboto;
   line-height: 130%;
-  gap: 8px;
+  padding: 0.375rem;
+  gap: 10px;
+`
 
-  &::before {
-    content: '';
-    border-radius: 9999px;
-    width: 2rem;
-    height: 2rem;
-    background-color: ${(props) =>
-      props.theme[STATUS_COLOR[props.statusColor]]};
-  }
+export const IconQuality = styled.span<StatusProps>`
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  justify-content: center;
+  color: ${(props) => props.theme.white};
+  width: 2rem;
+  height: 2rem;
+  background-color: ${(props) => props.theme[STATUS_COLOR[props.statusColor]]};
+`
+
+export const BoxContainerHome = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+`
+
+export const TitleCoffe = styled.p`
+  display: flex;
+  color: ${(props) => props.theme['base-subtitle']};
+  font-family: 'Baloo 2';
+  font-size: 2rem;
+  line-height: 130%;
+  font-weight: 800;
+  margin-top: 1rem;
+`
+export const CoffeList = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
 `
