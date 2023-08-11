@@ -2,6 +2,7 @@ import { styled } from 'styled-components'
 export const ItemContainer = styled.div`
   display: flex;
   padding: 0.5rem 0.25rem;
+  justify-content: center;
   border-bottom: 1px solid ${(props) => props.theme['base-button']};
   gap: 10px;
   img {
