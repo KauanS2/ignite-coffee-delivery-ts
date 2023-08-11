@@ -4,9 +4,11 @@ import {
   CheckoutContainer,
   CompleteOrder,
   ConfirmOrder,
+  ConfirmOrderListItems,
   FormAdress,
   IconAdress,
   IconPayment,
+  InformationItems,
   InputAdress,
   Payment,
   PaymentChoice,
@@ -18,6 +20,7 @@ import {
   MapPinLine,
   Money,
 } from 'phosphor-react'
+import { ItemsCart } from './ItemsCart'
 
 export function Checkout() {
   return (
@@ -72,8 +75,25 @@ export function Checkout() {
         </Payment>
       </CompleteOrder>
       <ConfirmOrder>
-        <div>items</div>
-        <div>informação</div>
+        <ConfirmOrderListItems>
+          <ItemsCart />
+          <ItemsCart />
+        </ConfirmOrderListItems>
+
+        <InformationItems>
+          <span>
+            Total de itens
+            <p>R$ 29,70</p>
+          </span>
+          <span>
+            Entrega
+            <p>R$ 3,50</p>
+          </span>
+          <h4>
+            Total
+            <p>R$ 33,20</p>
+          </h4>
+        </InformationItems>
         <NavLink to="/checkout/sucess" title="Sucesso">
           Confirmar Pedido
         </NavLink>
