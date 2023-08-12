@@ -8,7 +8,7 @@ import {
   Description,
   Value,
 } from './styles'
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 
 interface CardProductsProps {
   image: string
@@ -17,6 +17,13 @@ interface CardProductsProps {
   description: string
   type: string
 }
+
+interface CardContextType {
+  item: CardProductsProps[]
+}
+
+export const ItemContext = createContext({} as CardContextType)
+
 export function CardProducts({
   description,
   image,
@@ -29,6 +36,7 @@ export function CardProducts({
   function handleQuantityItemsAdd() {
     setQuantity((state) => state + 1)
   }
+
   function handleQuantityItemsMinus() {
     if (quantity === 0) {
       setQuantity(0)
@@ -36,6 +44,9 @@ export function CardProducts({
       setQuantity((state) => state - 1)
     }
   }
+
+  function handleAddToCart() {}
+
   return (
     <CardContainer>
       <img src={image} alt="" />
@@ -50,7 +61,7 @@ export function CardProducts({
             {quantity}
             <Plus onClick={handleQuantityItemsAdd} />
           </AddItems>
-          <button>
+          <button onClick={handleAddToCart}>
             <ShoppingCart size={17} />
           </button>
         </CardQuantityBox>
