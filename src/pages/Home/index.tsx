@@ -9,6 +9,8 @@ import {
   TitleCoffe,
 } from './styles'
 import imagem from '../../assets/imagem.svg'
+import coffeone from '../../assets/coffeone.svg'
+import coffetwo from '../../assets/coffeT.svg'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { CardProducts } from './components/CardProducts'
 export function Home() {
@@ -55,12 +57,20 @@ export function Home() {
 
       <TitleCoffe>Nossos cafés</TitleCoffe>
       <CoffeList>
-        <CardProducts />
-        <CardProducts />
-        <CardProducts />
-        <CardProducts />
-        <CardProducts />
-        <CardProducts />
+        <CardProducts
+          name="Expresso Tradicional"
+          type="Tradicional"
+          image={coffeone}
+          description="O tradicional café feito com água quente e grãos moídos"
+          price={9.91}
+        />
+        <CardProducts
+          name="Expresso Americano"
+          type="Tradicional"
+          image={coffetwo}
+          description="Expresso diluído, menos intenso que o tradicional"
+          price={5.0}
+        />
       </CoffeList>
     </HomeContainer>
   )
