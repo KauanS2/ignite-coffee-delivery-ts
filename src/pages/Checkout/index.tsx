@@ -82,7 +82,7 @@ export function Checkout() {
 
         <InformationItems>
           <span>
-            Total de itens
+            Total de items
             <p>R$ 29,70</p>
           </span>
           <span>

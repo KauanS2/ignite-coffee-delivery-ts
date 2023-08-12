@@ -71,6 +71,13 @@ export function Home() {
           description="Expresso diluído, menos intenso que o tradicional"
           price={5.0}
         />
+        <CardProducts
+          name="Expresso Americano"
+          type="Tradicional"
+          image={coffetwo}
+          description="Expresso diluído, menos intenso que o tradicional"
+          price={5.0}
+        />
       </CoffeList>
     </HomeContainer>
   )
