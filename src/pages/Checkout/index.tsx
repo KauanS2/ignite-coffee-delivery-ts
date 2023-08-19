@@ -5,22 +5,13 @@ import {
   CompleteOrder,
   ConfirmOrder,
   ConfirmOrderListItems,
-  FormAdress,
   IconAdress,
-  IconPayment,
   InformationItems,
-  InputAdress,
-  Payment,
-  PaymentChoice,
 } from './styles'
-import {
-  Bank,
-  CreditCard,
-  CurrencyDollar,
-  MapPinLine,
-  Money,
-} from 'phosphor-react'
+import { MapPinLine } from 'phosphor-react'
 import { ItemsCart } from './ItemsCart'
+import { InputsContainer } from './Inputs'
+import { PaymentMethod } from './PaymentMethod'
 
 export function Checkout() {
   return (
@@ -34,45 +25,10 @@ export function Checkout() {
               <span>Informe o endereço onde deseja receber seu pedido</span>
             </div>
           </IconAdress>
-          <FormAdress>
-            <InputAdress placeholder="CEP" id="intOne" type="text" />
-            <InputAdress placeholder="Rua" id="intTwo" type="text" />
-            <div>
-              <InputAdress placeholder="Número" id="intThree" type="text" />
-              <InputAdress placeholder="Complemento" id="intFour" type="text" />
-            </div>
-            <div>
-              <InputAdress placeholder="Bairro" id="intFive" type="text" />
-              <InputAdress placeholder="Cidade" id="intSix" type="text" />
-              <InputAdress placeholder="UF" id="intSeven" type="text" />
-            </div>
-          </FormAdress>
+          <InputsContainer />
         </Adress>
-        <Payment>
-          <IconPayment>
-            <CurrencyDollar size={22} />
-            <div>
-              <p>Pagamento</p>
-              <span>
-                O pagamento é feito na entrega. Escolha a forma que deseja pagar
-              </span>
-            </div>
-          </IconPayment>
-          <PaymentChoice>
-            <button>
-              <CreditCard size={16} />
-              CARTÃO DE CRÉDITO
-            </button>
-            <button>
-              <Bank size={16} />
-              CARTÃO DE DÉBITO
-            </button>
-            <button>
-              <Money size={16} />
-              DINHEIRO
-            </button>
-          </PaymentChoice>
-        </Payment>
+
+        <PaymentMethod />
       </CompleteOrder>
       <ConfirmOrder>
         <ConfirmOrderListItems>
