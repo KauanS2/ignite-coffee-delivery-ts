@@ -1,6 +1,6 @@
 import { Status } from '../Status'
 import { BoxContainerHome, HomeBox } from './styles'
-import imagem from '../../assets/imagem.svg'
+import imagem from '../../../../assets/imagem.svg'
 
 export function MainHome() {
   return (

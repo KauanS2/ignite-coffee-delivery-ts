@@ -12,16 +12,6 @@ export const CartBox = styled.div`
   justify-content: center;
   gap: 12px;
 
-  a {
-    display: flex;
-    border: 0;
-    padding: 0.5rem;
-    border-radius: 6px;
-    align-items: center;
-    background-color: ${(props) => props.theme['yellow-light']};
-    color: ${(props) => props.theme['yellow-dark']};
-  }
-
   span {
     display: flex;
     border-radius: 6px;
