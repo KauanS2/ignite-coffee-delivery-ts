@@ -1,8 +1,8 @@
-import { CartBox, HeaderContainer } from './styles'
+import { CartBox, HeaderContainer, TagLocal } from './styles'
 import logo from '../../assets/logomain.svg'
 import { MapPin } from 'phosphor-react'
 import { NavLink } from 'react-router-dom'
-import { ShoppingCartContainer } from '../CartContainer/styles'
+import { CartContainer } from '../CartContainer'
 
 export function Header() {
   return (
@@ -11,11 +11,11 @@ export function Header() {
         <img src={logo} alt="" />
       </NavLink>
       <CartBox>
-        <span>
+        <TagLocal>
           <MapPin size={22} />
           <p>Porto Alegre, RS</p>
-        </span>
-        <ShoppingCartContainer />
+        </TagLocal>
+        <CartContainer />
       </CartBox>
     </HeaderContainer>
   )

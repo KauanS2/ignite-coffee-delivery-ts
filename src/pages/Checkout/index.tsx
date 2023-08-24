@@ -33,7 +33,6 @@ export function Checkout() {
       <ConfirmOrder>
         <ConfirmOrderListItems>
           <ItemsCart />
-          <ItemsCart />
         </ConfirmOrderListItems>
 
         <InformationItems>

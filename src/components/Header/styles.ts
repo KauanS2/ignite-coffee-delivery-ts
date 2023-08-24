@@ -13,18 +13,21 @@ export const CartBox = styled.div`
   gap: 12px;
 
   span {
-    display: flex;
-    border-radius: 6px;
-    line-height: 130%;
-    font-weight: 600;
-    font-size: 14px;
-    align-items: center;
-    padding: 0.5rem;
-    background-color: ${(props) => props.theme['purple-light']};
-    color: ${(props) => props.theme['purple-dark']};
+  }
+`
 
-    svg {
-      color: ${(props) => props.theme.purple};
-    }
+export const TagLocal = styled.span`
+  display: flex;
+  border-radius: 6px;
+  line-height: 130%;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: ${(props) => props.theme['purple-light']};
+  color: ${(props) => props.theme['purple-dark']};
+
+  svg {
+    color: ${(props) => props.theme.purple};
   }
 `

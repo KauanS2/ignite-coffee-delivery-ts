@@ -20,6 +20,7 @@ interface CardProductsProps {
 
 interface CardContextType {
   item: CardProductsProps[]
+  cartItem: number
 }
 
 export const ItemContext = createContext({} as CardContextType)
